@@ -1,4 +1,4 @@
-<?    
+<?php    
 /*
 * +----------------------------------------------------------------------+
 * | PHP Version 4                                                        |
@@ -82,7 +82,7 @@ $MY_URI = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['SCRIPT_NAME'];
 $repositoryName       = 'OAI_BU_P8';
 $baseURL			  = $MY_URI;
 // You can use a static URI as well.
-// $baseURL 			= "http://127.0.0.1/OAI/oai2.php";
+//$baseURL 			= "http://localhost/thyp0809/navigsemiobiblio/library/php/oai/oai2.php";
 // do not change
 $protocolVersion      = '2.0';
 
