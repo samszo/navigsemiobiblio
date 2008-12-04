@@ -63,6 +63,7 @@ $output .= xmlrecord($record['dc_language'], 'dc:language', '', $indent);
 $output .= xmlrecord($record['dc_relation'], 'dc:relation', '', $indent);
 $output .= xmlrecord($record['dc_coverage'], 'dc:coverage', '', $indent);
 $output .= xmlrecord($record['dc_rights'], 'dc:rights', '', $indent);
+$output .= xmlrecord($record['cdu'], 'cdu', '', $indent);
 
 
 // Here, no changes need to be done
