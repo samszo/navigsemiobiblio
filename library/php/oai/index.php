@@ -44,11 +44,11 @@ the generated XML-answers in your browser.
   <dd><a href="doc/oai_records_pgsql.sql">OAI Records (pgsql)</a></dd>
 </dt>
 <dt><a name="tests" />Query and check your Data-Provider</dt>
-  <dd><a href="<?=$MY_URI ?>?verb=Identify">Identify</a></dd>
-  <dd><a href="<?=$MY_URI?>?verb=ListMetadataFormats">ListMetadataFormats</a></dd>
-  <dd><a href="<?=$MY_URI?>?verb=ListSets">ListSets</a></dd>
-  <dd><a href="<?=$MY_URI?>?verb=ListIdentfiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
-  <dd><a href="<?=$MY_URI?>?verb=ListRecords&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
+  <dd><a href="<?php $MY_URI ?>?verb=Identify">Identify</a></dd>
+  <dd><a href="<?php $MY_URI?>?verb=ListMetadataFormats">ListMetadataFormats</a></dd>
+  <dd><a href="<?php $MY_URI?>?verb=ListSets">ListSets</a></dd>
+  <dd><a href="<?php $MY_URI?>?verb=ListIdentfiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
+  <dd><a href="<?php $MY_URI?>?verb=ListRecords&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
 </dt>
 <p>
 For detailed tests use the <a href="http://re.cs.uct.ac.za/">Repository Explorer</a>.
