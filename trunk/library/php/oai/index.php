@@ -1,7 +1,7 @@
 <?php
 require_once('oai2/oaidp-config.php');
-$pos = strrpos($_POST["MY_URI"], '/');
-$MY_URI = substr($_POST["MY_URI"], 0, $pos). '/oai2.php';
+$pos = strrpos($MY_URI, '/');
+$MY_URI = substr($MY_URI, 0, $pos). '/oai2.php';
 
 ?>
 <html>
@@ -44,11 +44,11 @@ the generated XML-answers in your browser.
   <dd><a href="doc/oai_records_pgsql.sql">OAI Records (pgsql)</a></dd>
 </dt>
 <dt><a name="tests" />Query and check your Data-Provider</dt>
-  <dd><a href="<?php $MY_URI ?>?verb=Identify">Identify</a></dd>
-  <dd><a href="<?php $MY_URI?>?verb=ListMetadataFormats">ListMetadataFormats</a></dd>
-  <dd><a href="<?php $MY_URI?>?verb=ListSets">ListSets</a></dd>
-  <dd><a href="<?php $MY_URI?>?verb=ListIdentfiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
-  <dd><a href="<?php $MY_URI?>?verb=ListRecords&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
+  <dd><a href="<?php $MY_URI; ?>oai2.php?verb=Identify">Identify</a></dd>
+  <dd><a href="<?php $MY_URI; ?>oai2.php?verb=ListMetadataFormats">ListMetadataFormats</a></dd>
+  <dd><a href="<?php $MY_URI; ?>oai2.php?verb=ListSets">ListSets</a></dd>
+  <dd><a href="<?php $MY_URI; ?>oai2.php?verb=ListIdentfiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
+  <dd><a href="<?php $MY_URI; ?>oai2.php?verb=ListRecords&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
 </dt>
 <p>
 For detailed tests use the <a href="http://re.cs.uct.ac.za/">Repository Explorer</a>.
