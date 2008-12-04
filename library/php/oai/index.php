@@ -1,7 +1,7 @@
 <?php
 require_once('oai2/oaidp-config.php');
-$pos = strrpos(@$_POST["MY_URI"], '/');
-$MY_URI = substr(@$_POST["MY_URI"], 0, $pos). '/oai2.php';
+$pos = strrpos($_POST["MY_URI"], '/');
+$MY_URI = substr($_POST["MY_URI"], 0, $pos). '/oai2.php';
 
 ?>
 <html>
