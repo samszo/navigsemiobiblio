@@ -110,7 +110,7 @@ $granularity          = 'YYYY-MM-DDThh:mm:ssZ';
 // MUST (only one)
 // the earliest datestamp in your repository,
 // please adjust
-$earliestDatestamp    = '2008-12-03';
+$earliestDatestamp    = '2008-12-05';
 
 // this is appended if your granularity is seconds.
 // do not change
@@ -171,8 +171,8 @@ $expirationdatetime = gmstrftime('%Y-%m-%dT%TZ', time()+$tokenValid);
 
 // define all supported sets in your repository
 $SETS = 	array (
-				array('setSpec'=>'phdthesis', 'setName'=>'PHD Thesis', 'setDescription'=>'') //,
-				// array('setSpec'=>'math', 'setName'=>'Mathematics') ,
+				array('setSpec'=>'phdthesis', 'setName'=>'PHD Thesis', 'setDescription'=>'') ,
+				array('setSpec'=>'philo', 'setName'=>'philosophie') //,
 				// array('setSpec'=>'phys', 'setName'=>'Physics') 
 			);
 
@@ -234,12 +234,12 @@ $SQL['table'] = 'documents';
 
 // the name of the column where you store your sequence 
 // (or autoincrement values).
-//$SQL['id_column'] = 'serial';
+$SQL['id_column'] = 'serial';
 
 // the name of the column where you store the unique identifiers
 // pointing to your item.
 // this is your internal identifier for the item
-$SQL['identifier'] = 'id_notice';
+$SQL['identifier'] = 'url';
 
 // If you want to expand the internal identifier in some way
 // use this (but not for OAI stuff, see next line)
@@ -255,17 +255,17 @@ $oaiprefix = "oai".$delimiter.$repositoryIdentifier.$delimiter.$idPrefix;
 $sampleIdentifier     = $oaiprefix.'anIdentifier';
 
 // the name of the column where you store your datestamps
-//$SQL['datestamp'] = 'datestamp';
+$SQL['datestamp'] = 'datestamp';
 
 // the name of the column where you store information whether
 // a record has been deleted. Leave it as it is if you do not use
 // this feature.
-//$SQL['deleted'] = 'deleted';
+$SQL['deleted'] = 'deleted';
 
 // to be able to quickly retrieve the sets to which one item belongs,
 // the setnames are stored for each item
 // the name of the column where you store sets
-//$SQL['set'] = 'oai_set';
+$SQL['set'] = 'oai_set';
 
 // Here are a couple of queries which might need to be adjusted to 
 // your needs. Normally, if you have correctly named the columns above,
