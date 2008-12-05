@@ -30,10 +30,6 @@ CREATE TABLE `documents` (
   KEY `cdu` (`cdu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
--- 
--- Contenu de la table `documents`
--- 
-
 INSERT INTO `documents` (`serial`, `dc_title`, `cdu`, `provider`, `url`, `enterdate`, `oai_identifier`, `oai_set`, `datestamp`, `deleted`, `dc_creator`, `dc_subject`, `dc_description`, `dc_contributor`, `dc_publisher`, `dc_date`, `dc_type`, `dc_format`, `dc_identifier`, `dc_source`, `dc_language`, `dc_relation`, `dc_coverage`, `dc_rights`) VALUES 
 (1, 'Using Structural Metadata to Localize Experience of Digital Content', '1"04/14"(4)', 'Bibliothèque Paris8', 'http://www.bu.univ-paris8.fr/philosophie', '2008-12-02 15:54:47', 'org-OAIBUP8.org', 'philosophie', '2008-12-04 15:52:12', 'false', 'Dushay, Naomi', 'Digital Libraries', 'With the increasing technical sophistication of both information consumers and providers, there is increasing demand for more meaningful experiences of digital information. We present a framework that separates digital object experience, or rendering, from digital object storage and manipulation, so the rendering can be tailored to particular communities of users.', 'Dushay, Naomi', 'Bibliothèque Paris8', '2001-12-14', 'e-print', 'text/xml', 'http://127.0.0.1/navigsemiobiblio/library/php/oai/oai2.php', 'Shakespeare''s Romeo and Juliet', 'en', 'Shakespeare''s Romeo and Juliet', 'US civil war era; 1861-1865', 'Access limited to members.'),
 (2, 'Methods of Information in Medicine, Vol 32, No 4', '61(091)', 'Bibliothèque Paris8', 'http://www.bu.univ-paris8.fr/medecine', '2008-12-03 02:16:40', 'org-OAIBUP8.org', 'medecine', '2008-12-02 02:17:19', 'false', 'Paster', 'Informations sur la medecine', 'Les systèmes d informations appliquées à la medecine', 'Faculté de medecine ', 'Moguls Anonymous', '2008-12-04', 'text', 'text/xml', 'http://127.0.0.1/navigsemiobiblio/library/php/oai/oai2.php', 'Monsieur Paster', 'en', 'Histoire de la medecine', 'Recherches du 19 siècle', 'Access limited to members.');
