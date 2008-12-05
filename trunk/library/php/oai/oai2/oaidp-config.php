@@ -255,7 +255,7 @@ $oaiprefix = "oai".$delimiter.$repositoryIdentifier.$delimiter.$idPrefix;
 // adjust anIdentifier with sample contents an identifier
 //$sampleIdentifier     = $oaiprefix.'anIdentifier';
 
-$sampleIdentifier     = $oaiprefix.'serial';
+$sampleIdentifier     = $oaiprefix.'oai:org-OAIBUP8.org:http://www.bu.univ-paris8.fr';
 
 // the name of the column where you store your datestamps
 $SQL['datestamp'] = 'datestamp';
