@@ -172,6 +172,7 @@ $expirationdatetime = gmstrftime('%Y-%m-%dT%TZ', time()+$tokenValid);
 // define all supported sets in your repository
 $SETS = 	array (
 				array('setSpec'=>'phdthesis', 'setName'=>'PHD Thesis', 'setDescription'=>'') ,
+                        array('setSpec'=>'med', 'setName'=>'medecine') ,
 				array('setSpec'=>'philo', 'setName'=>'philosophie') //,
 				// array('setSpec'=>'phys', 'setName'=>'Physics') 
 			);
