@@ -47,7 +47,7 @@ the generated XML-answers in your browser.
   <dd><a href="<?php echo $MY_URI; ?>?verb=Identify">Identify</a></dd>
   <dd><a href="<?php echo $MY_URI; ?>?verb=ListMetadataFormats">ListMetadataFormats</a></dd>
   <dd><a href="<?php echo $MY_URI; ?>?verb=ListSets">ListSets</a></dd>
-  <dd><a href="<?php echo $MY_URI; ?>?verb=ListIdentfiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
+  <dd><a href="<?php echo $MY_URI; ?>?verb=ListIdentifiers&amp;metadataPrefix=oai_dc">ListIdentifiers</a></dd>
   <dd><a href="<?php echo $MY_URI; ?>?verb=ListRecords&amp;metadataPrefix=oai_dc">ListRecords</a></dd>
 </dt>
 <p>

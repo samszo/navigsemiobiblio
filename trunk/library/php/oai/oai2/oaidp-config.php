@@ -245,6 +245,7 @@ $SQL['identifier'] = 'url';
 // use this (but not for OAI stuff, see next line)
 $idPrefix = '';
 
+
 // this is your external (OAI) identifier for the item
 // this will be expanded to
 // oai:$repositoryIdentifier:$idPrefix$SQL['identifier']
@@ -252,7 +253,9 @@ $idPrefix = '';
 $oaiprefix = "oai".$delimiter.$repositoryIdentifier.$delimiter.$idPrefix; 
 
 // adjust anIdentifier with sample contents an identifier
-$sampleIdentifier     = $oaiprefix.'anIdentifier';
+//$sampleIdentifier     = $oaiprefix.'anIdentifier';
+
+$sampleIdentifier     = $oaiprefix.'serial';
 
 // the name of the column where you store your datestamps
 $SQL['datestamp'] = 'datestamp';
