@@ -63,9 +63,9 @@ $CONTENT_TYPE = 'Content-Type: text/plain';
 //ini_set('include_path', '.:/usr/share/php:/www/oai/PEAR');
 // Windows users might like to try this
 // ini_set('include_path', '.;c:\php\pear');
-ini_set('include_path', '.;c:\Program Files\EasyPHP 2.0b1\www\navigsemiobiblio\library\php\pear');
+//ini_set('include_path', '.;c:\Program Files\EasyPHP 2.0b1\www\navigsemiobiblio\library\php\pear');
 //ini_set('include_path', '.;..\..\pear');
-//ini_set('include_path', '.;C:\wamp\www\thyp0809\navigsemiobiblio\library\php\pear');
+ini_set('include_path', '.;C:\wamp\www\navigsemiobiblio\library\php\pear');
 //ini_set('include_path', '../../pear/');
 
 // if there are problems with unknown 'numrows', then make sure
@@ -192,13 +192,14 @@ $METADATAFORMATS = 	array (
 							'metadataNamespace'=>'http://www.openarchives.org/OAI/2.0/oai_dc/',
 							'myhandler'=>'record_dc.php',
 							'record_prefix'=>'dc',
-							'record_namespace' => 'http://purl.org/dc/elements/1.1/'
-						) //,
-						//array('metadataPrefix'=>'olac', 
-						//	'schema'=>'http://www.language-archives.org/OLAC/olac-2.0.xsd',
-						//	'metadataNamespace'=>'http://www.openarchives.org/OLAC/0.2/',
-						//	'handler'=>'record_olac.php'
-						//)
+							'record_namespace' => 'http://purl.org/dc/elements/1.1/')
+						,
+						'oai_cdup8' => array('metadataPrefix'=>'oai_cdup8', 
+							'schema'=>'http://www.openarchives.org/OAI/2.0/oai_dc.xsd',
+							'metadataNamespace'=>'http://www.openarchives.org/OAI/2.0/oai_dc/',
+							'myhandler'=>'record_oai_cdup8.php',
+							'record_prefix'=>'oai_cdup8',
+							'record_namespace' => 'http://purl.org/dc/elements/1.1/')
 					);
 
 // 
@@ -220,7 +221,7 @@ $DSN = "mysql://$DB_USER:$DB_PASSWD@$DB_HOST/$DB_NAME";
 
 // the charset you store your metadata in your database
 // currently only utf-8 and iso8859-1 are supported
-$charset = "iso8859-1";
+$charset = "utf-8";
 
 // if entities such as < > ' " in your metadata has already been escaped 
 // then set this to true (e.g. you store < as &lt; in your DB)
@@ -232,7 +233,7 @@ $xmlescaped = false;
 $SQL['split'] = ';';
 
 // the name of the table where your store your metadata
-$SQL['table'] = 'documents';
+$SQL['table'] = 'docu';
 
 // the name of the column where you store your sequence 
 // (or autoincrement values).
