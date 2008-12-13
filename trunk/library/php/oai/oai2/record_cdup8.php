@@ -22,12 +22,12 @@
 * +----------------------------------------------------------------------+
 * | Derived from work by U. Müller, HUB Berlin, 2002                     |
 * |                                                                      |
-* | Written by Heinrich Stamerjohanns, May 2002                          |
-* /            stamer@uni-oldenburg.de                                   |
+* | Written by Mehdi Touibi, December 2008                          |
+* /            touibimehdi@yahoo.fr                                   |
 * +----------------------------------------------------------------------+
 */
 //
-// $Id: record_dc.php,v 1.02 2003/04/08 14:32:07 stamer Exp $
+// $Id: record_cdup8.php,v 1.02 2008/12/08 14:32:07 stamer Exp $
 //
 
 // this handles unqualified DC records, but can be also used as a sample
@@ -36,7 +36,7 @@
 // change output your metadata records further below.
 
 // please change to the according metadata prefix you use 
-$prefix = 'oai_dc';
+$prefix = 'oai_cdup8';
 
 // you do need to change anything in the namespace and schema stuff
 // the correct headers should be created automatically
@@ -48,34 +48,17 @@ $output .= metadataHeader($prefix);
 
 // please change according to your metadata format
 $indent = 6;
-$output .= xmlrecord($record['dc_title'], 'dc:title', '', $indent);
-$output .= xmlrecord($record['dc_creator'],'dc:creator', '', $indent);
-$output .= xmlrecord($record['dc_subject'], 'dc:subject', '', $indent);
-$output .= xmlrecord($record['dc_description'], 'dc:description', '', $indent);
-$output .= xmlrecord($record['dc_publisher'], 'dc:publisher', '', $indent);
-$output .= xmlrecord($record['dc_contributor'], 'dc:contributor', '', $indent);
-$output .= xmlrecord($record['dc_date'], 'dc:date', '', $indent);
-$output .= xmlrecord($record['dc_type'], 'dc:type', '', $indent);
-$output .= xmlrecord($record['dc_format'], 'dc:format', '', $indent);
-$output .= xmlrecord($record['dc_identifier'], 'dc:identifier', '', $indent);
-$output .= xmlrecord($record['dc_source'], 'dc:source', '', $indent);
-$output .= xmlrecord($record['dc_language'], 'dc:language', '', $indent);
-$output .= xmlrecord($record['dc_relation'], 'dc:relation', '', $indent);
-$output .= xmlrecord($record['dc_coverage'], 'dc:coverage', '', $indent);
-$output .= xmlrecord($record['dc_rights'], 'dc:rights', '', $indent);
-
 $output .= xmlrecord($record['cdu'], 'cdu', '', $indent);
 $output .= xmlrecord($record['timeline'],'timeline', '', $indent);
 $output .= xmlrecord($record['kml'], 'kml', '', $indent);
 $output .= xmlrecord($record['ieml'], 'ieml', '', $indent);
 
 
-
 // Here, no changes need to be done
 $output .=           
 '     </'.$prefix;
 if (isset($METADATAFORMATS[$prefix]['record_prefix'])) {
-	$output .= ':'.$METADATAFORMATS[$prefix]['record_prefix'];
+    $output .= ':'.$METADATAFORMATS[$prefix]['record_prefix'];
 }
 $output .= ">\n";
 $output .= 
