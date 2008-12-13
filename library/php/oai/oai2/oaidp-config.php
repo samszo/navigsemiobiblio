@@ -197,7 +197,7 @@ $METADATAFORMATS = 	array (
 						'oai_cdup8' => array('metadataPrefix'=>'oai_cdup8', 
 							'schema'=>'http://www.openarchives.org/OAI/2.0/oai_dc.xsd',
 							'metadataNamespace'=>'http://www.openarchives.org/OAI/2.0/oai_dc/',
-							'myhandler'=>'record_oai_cdup8.php',
+							'myhandler'=>'record_cdup8.php',
 							'record_prefix'=>'oai_cdup8',
 							'record_namespace' => 'http://purl.org/dc/elements/1.1/')
 					);
@@ -235,14 +235,18 @@ $SQL['split'] = ';';
 // the name of the table where your store your metadata
 $SQL['table'] = 'docu';
 
+
 // the name of the column where you store your sequence 
 // (or autoincrement values).
-$SQL['id_column'] = 'serial';
+
+$SQL['id_column'] = 'docu.dc_subject';
+$SQL['id_column_dico'] = 'dico.cdu';
 
 // the name of the column where you store the unique identifiers
 // pointing to your item.
 // this is your internal identifier for the item
 $SQL['identifier'] = 'url';
+
 
 // If you want to expand the internal identifier in some way
 // use this (but not for OAI stuff, see next line)
@@ -281,18 +285,56 @@ $SQL['set'] = 'oai_set';
 // all records
 // the useless condition id_column = id_column is just there to ease
 // further extensions to the query, please leave it as it is.
+
+//function selectallQuery ($id = '')
+//{
+//	global $SQL;
+
+//    $SQL['table1'] = 'dico';
+     
+// 	$query = 'SELECT * FROM ' .'docu'.'docu'. ' WHERE serial =1 ' ;
+//    $query = 'SELECT * FROM docu a, dico b WHERE a.dc_subject = b.cdu';
+    
+//    $query = 'SELECT * FROM '.$SQL['table'].',dico WHERE docu.dc_subject = dico.cdu';  
+//    $query = 'SELECT * FROM '.$SQL['table'].' WHERE ';    
+//    $query = 'SELECT * FROM docu a, dico b WHERE';      
+//    $query = 'SELECT * FROM '.$SQL['table'].', dico WHERE'; 
+
+//	if ($id == '') {
+//		$query .= $SQL['id_column'].' = '.$SQL['id_column'] || 'a.dc_subject = b.cdu';
+//          $query .= $SQL['id_column'].' = 'dico.cdu;
+
+//          $query .= docu.dc_subject = dico.cdu;
+        
+//	}
+//	else {
+//		$query .= $SQL['identifier']." ='$id'" || 'a.dc_subject = b.cdu';
+//	}
+      
+//	return $query;
+           
+//}
+
+
 function selectallQuery ($id = '')
 {
 	global $SQL;
-	$query = 'SELECT * FROM '.$SQL['table'].' WHERE ';
+     
+ 	$query = 'SELECT * FROM '.$SQL['table'].', dico WHERE ';
+      
+
 	if ($id == '') {
-		$query .= $SQL['id_column'].' = '.$SQL['id_column'];
+		$query .= $SQL['id_column'].' = '.$SQL['id_column_dico'];
+        
 	}
 	else {
 		$query .= $SQL['identifier']." ='$id'";
 	}
+      
 	return $query;
+           
 }
+
 
 // this function will return identifier and datestamp for all records
 function idQuery ($id = '')
