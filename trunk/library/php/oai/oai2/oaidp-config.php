@@ -63,9 +63,9 @@ $CONTENT_TYPE = 'Content-Type: text/plain';
 //ini_set('include_path', '.:/usr/share/php:/www/oai/PEAR');
 // Windows users might like to try this
 // ini_set('include_path', '.;c:\php\pear');
-ini_set('include_path', '.;c:\Program Files\EasyPHP 2.0b1\www\navigsemiobiblio\library\php\pear');
+//ini_set('include_path', '.;c:\Program Files\EasyPHP 2.0b1\www\navigsemiobiblio\library\php\pear');
 //ini_set('include_path', '.;..\..\pear');
-//ini_set('include_path', '.;C:\wamp\www\navigsemiobiblio\library\php\pear');
+ini_set('include_path', '.;C:\wamp\www\navigsemiobiblio\library\php\pear');
 //ini_set('include_path', '../../pear/');
 
 // if there are problems with unknown 'numrows', then make sure

@@ -49,9 +49,9 @@ $output .= metadataHeader($prefix);
 // please change according to your metadata format
 $indent = 6;
 $output .= xmlrecord($record['cdu'], 'cdu', '', $indent);
-$output .= xmlrecord($record['timeline'],'timeline', '', $indent);
-$output .= xmlrecord($record['kml'], 'kml', '', $indent);
 $output .= xmlrecord($record['ieml'], 'ieml', '', $indent);
+$output .= "<timeline>".$record['timeline']."</timeline>\n";
+$output .= "".$record['kml']."\n";
 
 
 // Here, no changes need to be done
