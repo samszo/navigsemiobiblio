@@ -64,13 +64,6 @@ $output .= xmlrecord($record['dc_relation'], 'dc:relation', '', $indent);
 $output .= xmlrecord($record['dc_coverage'], 'dc:coverage', '', $indent);
 $output .= xmlrecord($record['dc_rights'], 'dc:rights', '', $indent);
 
-$output .= xmlrecord($record['cdu'], 'cdu', '', $indent);
-$output .= xmlrecord($record['timeline'],'timeline', '', $indent);
-$output .= xmlrecord($record['kml'], 'kml', '', $indent);
-$output .= xmlrecord($record['ieml'], 'ieml', '', $indent);
-
-
-
 // Here, no changes need to be done
 $output .=           
 '     </'.$prefix;
