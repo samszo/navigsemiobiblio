@@ -48,6 +48,7 @@ $output .= metadataHeader($prefix);
 
 // please change according to your metadata format
 $indent = 6;
+$output .= xmlrecord($record['serial'], 'serial', '', $indent);
 $output .= xmlrecord($record['dc_title'], 'dc:title', '', $indent);
 $output .= xmlrecord($record['dc_creator'],'dc:creator', '', $indent);
 $output .= xmlrecord($record['dc_subject'], 'dc:subject', '', $indent);
