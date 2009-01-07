@@ -36,9 +36,12 @@ foreach($args as $key => $val) {
 	switch ($key) { 
 		case 'identifier':
 			$identifier = $val; 
+			//l'identifiant n'est pas forcement une url
+			/*
 			if (!is_valid_uri($identifier)) {
 				$errors .= oai_error('badArgument', $key, $val);
 			}
+			*/
 			break;
 
 		case 'metadataPrefix':
@@ -50,7 +53,21 @@ foreach($args as $key => $val) {
 				$errors .= oai_error('cannotDisseminateFormat', $key, $val);
 			}
 			break;
-
+		//cas de debugage
+		case 'debug_stop':
+			break;
+		case 'debug_port':
+			break;
+		case 'start_debug':
+			break;
+		case 'debug_start_session':
+			break;
+		case 'debug_session_id':
+			break;
+		case 'send_sess_end':
+			break;
+		case 'debug_host':
+			break;			
 		default:
 			$errors .= oai_error('badArgument', $key, $val);
 	}
